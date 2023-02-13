@@ -1,0 +1,18 @@
+{
+    "name": "riss/veille-php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Riss\\VeillePhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TerenceRiss",
+            "email": "rissterence55@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
