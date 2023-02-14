@@ -20,7 +20,6 @@ class Personnage {
 }
 
   
-    //  fonctioner de regeneration
     public function  regenerer ($vie = null) {
         if (is_null($vie)){
 
@@ -30,18 +29,16 @@ class Personnage {
         }
     }
 
-    // public function goodOne ($goodBoy){
-    //     if ($goodBoy->hero);
-    // }
+ 
 
-    // fonction pour attaquer de facon aléatoire 
+    
     public function bonus (){
         if (!$this->goodBoy){
             return 0;
         }
+        
         $dice = random_int(1,6);
         
-        // dump($dice);
         if ($dice<=3){
             echo $this->nom . " a reçu un bonus d'armure! \n";
             return 20;
@@ -49,13 +46,11 @@ class Personnage {
             return 0;
         }
     }   
-    // fonction pour faire mourir le hero ou les ennemies 
+
     public function mort (){
         return $this->vie <= 0;
     }
 
-    // fonction pour infliger des degats a la cible et calclule enntre le bonus moins la vie 
-    //  quand un ennemie est mort il ne doit plus attaquer 
     public function attaque ($cible){
         if ($cible->mort()){
             echo "la cible est morte, impossible d'attaquer\n";
@@ -67,4 +62,3 @@ class Personnage {
 
  }
 
-//  seul le hero doit recevoir un bonus , et le combat doit finir quand le hero ou les ennemis sont mort 
