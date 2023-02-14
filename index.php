@@ -5,7 +5,7 @@ use Riss\VeillePhp\Personnage;
 
 
 
-$hero = new Personnage ("Fatima", 15,20,200 );
+$hero = new Personnage ("Fatima", 15,20,200, true );
 $hero->regenerer();
 dump($hero);
 
@@ -21,15 +21,37 @@ dump($chefMinion);
 $chefMinion->attaque($hero);
 $minion->attaque($hero);
 $lieutenantMinion->attaque($hero);
+dump($hero->mort());
+
 
 $chefMinion->attaque($hero);
 $minion->attaque($hero);
 $lieutenantMinion->attaque($hero);
+dump($hero->mort());
 
 $hero->attaque($minion);
 $hero->attaque($lieutenantMinion);
 $hero->attaque($chefMinion);
+dump($minion->mort(),$lieutenantMinion->mort(),$chefMinion->mort());
 
 $hero->attaque($minion);
 $hero->attaque($lieutenantMinion);
 $hero->attaque($chefMinion);
+dump($minion->mort(),$lieutenantMinion->mort(),$chefMinion->mort());
+
+
+$hero->attaque($minion);
+$hero->attaque($lieutenantMinion);
+$hero->attaque($chefMinion);
+dump($minion->mort(),$lieutenantMinion->mort(),$chefMinion->mort());
+
+
+$hero->attaque($minion);
+$hero->attaque($lieutenantMinion);
+$hero->attaque($chefMinion);
+dump($minion->mort(),$lieutenantMinion->mort(),$chefMinion->mort());
+
+$hero->attaque($minion);
+$hero->attaque($lieutenantMinion);
+$hero->attaque($chefMinion);
+dump($minion->mort(),$lieutenantMinion->mort(),$chefMinion->mort());
